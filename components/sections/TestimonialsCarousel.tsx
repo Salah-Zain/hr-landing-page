@@ -4,6 +4,7 @@ import { useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Star, Quote } from "lucide-react";
+import Image from "next/image";
 import { MotionWrapper } from "@/components/MotionWrapper";
 import { Card, CardContent } from "@/components/ui/Card";
 import { cn } from "@/lib/utils";
@@ -80,12 +81,13 @@ export function TestimonialsCarousel() {
                       
                       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-auto gap-4 pt-6 border-t border-slate-100">
                         <div className="flex items-center gap-4">
-                          <div className="w-14 h-14 rounded-full bg-slate-100 border-2 border-white shadow-sm overflow-hidden flex items-center justify-center shrink-0">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img 
+                          <div className="w-14 h-14 rounded-full bg-slate-100 border-2 border-white shadow-sm overflow-hidden flex items-center justify-center shrink-0 relative">
+                            <Image 
                               src={`https://api.dicebear.com/7.x/notionists/svg?seed=${item.name}&backgroundColor=f1f5f9`} 
                               alt={item.name}
-                              className="w-full h-full object-cover"
+                              fill
+                              className="object-cover"
+                              sizes="56px"
                             />
                           </div>
                           <div>

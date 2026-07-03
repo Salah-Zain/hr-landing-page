@@ -6,6 +6,7 @@ import { MotionWrapper } from "@/components/MotionWrapper";
 import { Card, CardContent } from "@/components/ui/Card";
 import { fallbackContent } from "@/lib/content";
 import Link from "next/link";
+import Image from "next/image";
 
 export function FacultyCarousel() {
   const { faculty } = fallbackContent;
@@ -47,12 +48,13 @@ export function FacultyCarousel() {
                     <CardContent className="p-8 flex flex-col items-center text-center relative h-full">
                       
                       {/* Avatar */}
-                      <div className="w-24 h-24 rounded-[1.5rem] bg-slate-50 mb-6 overflow-hidden border-4 border-white shadow-md flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-500">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img 
+                      <div className="w-24 h-24 rounded-[1.5rem] bg-slate-50 mb-6 overflow-hidden border-4 border-white shadow-md flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-500 relative">
+                        <Image 
                           src={`https://api.dicebear.com/7.x/notionists/svg?seed=${item.name}&backgroundColor=fef3c7`} 
                           alt={item.name}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
+                          sizes="96px"
                         />
                       </div>
                       

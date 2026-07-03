@@ -20,9 +20,11 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const lastScrollY = useRef(0);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() ?? 0;
+    const previous = lastScrollY.current;
+    lastScrollY.current = latest;
     
     // Check if scrolled down for styling
     if (latest > 50) {
