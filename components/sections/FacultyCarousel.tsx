@@ -48,6 +48,7 @@ export function FacultyCarousel() {
                       
                       {/* Avatar */}
                       <div className="w-24 h-24 rounded-[1.5rem] bg-slate-50 mb-6 overflow-hidden border-4 border-white shadow-md flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-500">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img 
                           src={`https://api.dicebear.com/7.x/notionists/svg?seed=${item.name}&backgroundColor=fef3c7`} 
                           alt={item.name}

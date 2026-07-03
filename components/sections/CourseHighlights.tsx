@@ -1,6 +1,5 @@
 "use client";
 
-import ScrollStack, { ScrollStackItem } from "@/components/ui/ScrollStack";
 import { MotionWrapper } from "@/components/MotionWrapper";
 import { CheckCircle2, Briefcase, GraduationCap, Users, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";

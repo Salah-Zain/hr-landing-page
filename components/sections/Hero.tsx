@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { MotionWrapper } from "@/components/MotionWrapper";
@@ -11,7 +11,7 @@ import { fallbackContent } from "@/lib/content";
 const rotatingWords = ["START", "UPSKILL", "LEAD"];
 
 export function Hero() {
-  const { headline, sub, body, stats, cta1 } = fallbackContent.hero;
+  const { sub, body, cta1 } = fallbackContent.hero;
   const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {

@@ -75,12 +75,13 @@ export function TestimonialsCarousel() {
                         ))}
                       </div>
                       <p className="text-slate-700 text-lg md:text-xl mb-10 leading-relaxed font-medium flex-1">
-                        "{item.quote}"
+                        &quot;{item.quote}&quot;
                       </p>
                       
                       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-auto gap-4 pt-6 border-t border-slate-100">
                         <div className="flex items-center gap-4">
                           <div className="w-14 h-14 rounded-full bg-slate-100 border-2 border-white shadow-sm overflow-hidden flex items-center justify-center shrink-0">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img 
                               src={`https://api.dicebear.com/7.x/notionists/svg?seed=${item.name}&backgroundColor=f1f5f9`} 
                               alt={item.name}

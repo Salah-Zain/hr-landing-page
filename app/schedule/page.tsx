@@ -1,4 +1,4 @@
-import { Calendar, Phone, Mail, MapPin, ArrowUpRight, ArrowLeft } from "lucide-react";
+import { Phone, Mail, ArrowUpRight, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 const InstagramIcon = ({ className }: { className?: string }) => (
@@ -29,7 +29,7 @@ export default function SchedulePage() {
               Start your journey
             </p>
             <h1 className="mt-4 max-w-4xl text-balance text-5xl font-semibold leading-[0.95] tracking-tight text-black sm:text-7xl md:text-8xl">
-              Let's map out your <span className="italic font-light text-amber-500">HR Career.</span>
+              Let&apos;s map out your <span className="italic font-light text-amber-500">HR Career.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-lg text-black/60 text-pretty sm:text-xl leading-relaxed">
               Select a time below to schedule your free live demo. We personally guide you through our platform, answer your questions, and show you exactly how PlaceX works.

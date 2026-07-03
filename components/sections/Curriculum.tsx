@@ -1,9 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ClipboardList, Coins, MonitorSmartphone, BarChart3, MessageSquare, Building2, CalendarDays, ArrowRight } from "lucide-react";
+import { ClipboardList, Coins, MonitorSmartphone, BarChart3, MessageSquare, Building2, ArrowRight } from "lucide-react";
 import { MotionWrapper } from "@/components/MotionWrapper";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { fallbackContent } from "@/lib/content";
@@ -25,7 +23,7 @@ export function Curriculum() {
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <MotionWrapper className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-3 tracking-tight">
-            What You'll <span className="text-amber-500">Master</span>
+            What You&apos;ll <span className="text-amber-500">Master</span>
           </h2>
           <p className="text-sm md:text-base text-slate-500 font-medium max-w-2xl mx-auto">
             6 industry-mapped modules built for real HR roles.

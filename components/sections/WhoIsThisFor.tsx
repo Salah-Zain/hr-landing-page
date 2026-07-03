@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import { GraduationCap, Briefcase, TrendingUp, Building, Flag, XCircle, ChevronRight } from "lucide-react";
+import { GraduationCap, Briefcase, TrendingUp, Building, Flag, ChevronRight } from "lucide-react";
 import { MotionWrapper } from "@/components/MotionWrapper";
 
 export function WhoIsThisFor() {
