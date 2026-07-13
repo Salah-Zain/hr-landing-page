@@ -26,9 +26,10 @@ export function Hero() {
       <section className="bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridBackground.png')] w-full bg-no-repeat bg-cover bg-center pt-40 pb-44 flex flex-col items-center justify-center min-h-screen -mt-20">
 
         <MotionWrapper delay={0.2} yOffset={20}>
-          <h1 className="text-4xl sm:text-5xl md:text-[64px] lg:text-[72px] font-extrabold max-w-[1000px] text-center mx-auto mt-10 text-slate-900 leading-[1.2] md:leading-[1.1] tracking-tight px-4" style={{ fontFamily: "var(--font-title-en), var(--font-title-ml), sans-serif" }}>
-            HR കരിയർ{" "}
-            <span className="inline-grid [grid-template-areas:'text'] justify-start items-center">
+          <h1 className="text-5xl sm:text-6xl md:text-[64px] lg:text-[72px] font-extrabold max-w-[1000px] text-center mx-auto mt-10 text-slate-900 leading-[1.1] tracking-tight px-4" style={{ fontFamily: "var(--font-title-en), var(--font-title-ml), sans-serif" }}>
+            <span className="italic">HR Career</span>{" "}
+            <br className="block sm:hidden" />
+            <span className="inline-grid [grid-template-areas:'text'] justify-start items-center italic">
               {/* Invisible spacer using the longest word to reserve exact width and prevent jitter */}
               <span className="invisible pointer-events-none [grid-area:text]">
                 UPSKILL
@@ -41,14 +42,17 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0, rotateX: 0 }}
                   exit={{ opacity: 0, y: -20, rotateX: 90 }}
                   transition={{ duration: 0.5, type: "spring", bounce: 0.3 }}
-                  className="[grid-area:text] text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 origin-bottom w-full text-left"
+                  className="[grid-area:text] text-[#fe9b19] origin-bottom w-full text-left"
                 >
                   {rotatingWords[wordIndex]}
                 </motion.span>
               </AnimatePresence>
             </span>
+            <br className="block sm:hidden" />
             <br className="hidden sm:block" />{" "}
-            ചെയ്യുവാൻ റെഡി<br />ആണോ?
+            ചെയ്യുവാൻ <span className="italic">Ready</span>
+            <br />
+            ആണോ?
           </h1>
         </MotionWrapper>
 
@@ -67,9 +71,9 @@ export function Hero() {
         <MotionWrapper delay={0.6} yOffset={20}>
           <div className="mx-auto w-full flex items-center justify-center mt-10">
             <Link href="/schedule">
-              <Button size="lg" className="px-8 h-16 text-lg">
+              <Button size="lg" className="group">
                 <span>{cta1}</span>
-                <ArrowRight className="w-6 h-6" />
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>

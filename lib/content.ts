@@ -18,35 +18,56 @@ export const fallbackContent = {
       title: "Senior HR Consultant",
       company: "Tech Mahindra",
       experience: "12+ years experience",
-      photo: "/images/faculty-1.jpg"
+      photo: "/images/faculty-1.png"
     },
     {
       name: "Jane Smith",
       title: "HR Head",
       company: "TCS",
       experience: "15+ years experience",
-      photo: "/images/faculty-2.jpg"
+      photo: "/images/faculty-2.png"
     },
     {
       name: "Michael Johnson",
       title: "Talent Acquisition Lead",
       company: "Infosys",
       experience: "10+ years experience",
-      photo: "/images/faculty-3.jpg"
+      photo: "/images/faculty-3.png"
     },
     {
       name: "Sarah Williams",
       title: "HR Business Partner",
       company: "Wipro",
       experience: "8+ years experience",
-      photo: "/images/faculty-4.jpg"
+      photo: "/images/faculty-4.png"
     },
     {
       name: "David Brown",
       title: "VP of HR",
       company: "Cognizant",
       experience: "20+ years experience",
-      photo: "/images/faculty-5.jpg"
+      photo: "/images/faculty-5.png"
+    },
+    {
+      name: "Priya Nair",
+      title: "HR Operations Lead",
+      company: "UST Global",
+      experience: "11+ years experience",
+      photo: "/images/faculty-6.png"
+    },
+    {
+      name: "Arun Kumar",
+      title: "Compensation Specialist",
+      company: "EY India",
+      experience: "9+ years experience",
+      photo: "/images/faculty-7.png"
+    },
+    {
+      name: "Deepa Menon",
+      title: "Director of HR",
+      company: "Allianz",
+      experience: "18+ years experience",
+      photo: "/images/faculty-8.png"
     }
   ],
   curriculum: [
@@ -61,17 +82,17 @@ export const fallbackContent = {
       icon: "Coins"
     },
     {
-      title: "HRMS & Tools",
+      title: "HRMS, Tools and HR Analytics",
       description: "Zoho People, Greythr, Excel HR — hands on",
       icon: "MonitorSmartphone"
     },
     {
-      title: "HR Analytics",
+      title: "GCC HR Compliance",
       description: "Attrition data, workforce reports",
       icon: "BarChart3"
     },
     {
-      title: "HR Communication",
+      title: "Performance Management System",
       description: "Handling employees, conflict, management",
       icon: "MessageSquare"
     },
@@ -105,6 +126,48 @@ export const fallbackContent = {
       quote: "The live projects gave me the confidence to handle real-world HR scenarios.",
       tag: "Fresher",
       photo: "/images/testi-3.jpg"
+    }
+  ],
+  videoTestimonials: [
+    {
+      id: "video-1",
+      name: "Aswathy Mohan",
+      batch: "Batch 12",
+      company: "UST Global",
+      role: "Associate HR Specialist",
+      quote: "PerpeX HR course completely changed my confidence. The practical payroll calculations and mock interviews prepared me to secure an offer in UST.",
+      tag: "Non-IT to HR Switch",
+      videoUrl: "/testimonials/video-1.mp4"
+    },
+    {
+      id: "video-2",
+      name: "Jithin Mathew",
+      batch: "Batch 15",
+      company: "Allianz India",
+      role: "HR Operations Associate",
+      quote: "Learning GCC HR compliance and Zoho People hands-on was a game-changer. I wasn't just learning theory; I was practicing what HRs actually do.",
+      tag: "Career Growth",
+      videoUrl: "/testimonials/video-2.mp4"
+    },
+    {
+      id: "video-3",
+      name: "Riya Elizabeth",
+      batch: "Batch 14",
+      company: "EY India",
+      role: "Talent Acquisition Specialist",
+      quote: "The mentorship at PerpeX is outstanding. They hold your hand through the entire journey, from resume writing to placement interviews.",
+      tag: "Placement Support",
+      videoUrl: "/testimonials/video-3.mp4"
+    },
+    {
+      id: "video-4",
+      name: "Abhijith S.",
+      batch: "Batch 16",
+      company: "Standard Chartered",
+      role: "HR Operations Specialist",
+      quote: "I recommend PerpeX to anyone who wants a serious career in HR. The live project compliance audits were exactly like my current job duties.",
+      tag: "Fresher Placed",
+      videoUrl: "/testimonials/video-4.mp4"
     }
   ],
   faq: [

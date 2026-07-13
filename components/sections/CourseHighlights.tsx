@@ -38,7 +38,7 @@ export function CourseHighlights() {
       <div className="container mx-auto px-4 md:px-6">
         <MotionWrapper className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-3 tracking-tight">
-            Why Choose <span className="text-amber-500">PlaceX?</span>
+            Why Choose <span className="text-[#fe9b19]">PlaceX?</span>
           </h2>
           <p className="text-sm md:text-base text-slate-500 font-medium max-w-2xl mx-auto">
             We bridge the gap between academic knowledge and industry expectations.
@@ -75,9 +75,9 @@ export function CourseHighlights() {
 
         <MotionWrapper delay={0.2} yOffset={20} className="flex justify-center mt-8 relative z-50">
           <Link href="/schedule">
-            <Button size="lg" className="flex items-center gap-2 bg-slate-900 hover:bg-amber-500 text-white px-8 h-14 rounded-full font-bold transition-colors">
+            <Button size="lg" className="flex items-center gap-2 bg-slate-900 hover:bg-[#fe9b19] text-white rounded-full font-bold transition-colors group">
               <span>Book a Free Demo</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
         </MotionWrapper>

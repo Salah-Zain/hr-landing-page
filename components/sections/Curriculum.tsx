@@ -23,26 +23,26 @@ export function Curriculum() {
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <MotionWrapper className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-3 tracking-tight">
-            What You&apos;ll <span className="text-amber-500">Master</span>
+            What You&apos;ll <span className="text-[#fe9b19]">Master</span>
           </h2>
           <p className="text-sm md:text-base text-slate-500 font-medium max-w-2xl mx-auto">
             6 industry-mapped modules built for real HR roles.
           </p>
         </MotionWrapper>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto mb-20">
           {curriculum.map((module, index) => {
             const Icon = iconMap[module.icon] || ClipboardList;
             
             return (
               <MotionWrapper key={index} delay={0.1 * index} yOffset={20}>
-                <div className="h-full bg-white border border-gray-100 rounded-3xl p-6 sm:p-8 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300 group flex flex-col justify-start">
+                <div className="h-full bg-white border border-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-8 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300 group flex flex-col justify-start">
                   
-                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-8 shrink-0">
-                    <Icon className="w-5 h-5 text-slate-600 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-100 flex items-center justify-center mb-4 sm:mb-8 shrink-0">
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-600 group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 tracking-tight">
+                  <h3 className="text-sm sm:text-xl font-bold text-slate-900 mb-1 sm:mb-2 tracking-tight">
                     {module.title}
                   </h3>
                   
@@ -57,7 +57,7 @@ export function Curriculum() {
 
         <MotionWrapper delay={0.6} className="text-center">
           <Link href="/schedule">
-            <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-base group">
+            <Button size="lg" className="w-full sm:w-auto group">
               <span>View Full Syllabus</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>

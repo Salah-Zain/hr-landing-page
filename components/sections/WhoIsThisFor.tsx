@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import { GraduationCap, Briefcase, TrendingUp, Building, Flag, ChevronRight } from "lucide-react";
+import { GraduationCap, Briefcase, TrendingUp, Building, ChevronRight } from "lucide-react";
 import { MotionWrapper } from "@/components/MotionWrapper";
 
 export function WhoIsThisFor() {
@@ -37,13 +37,6 @@ export function WhoIsThisFor() {
       desc: "Manage your team better. Learn core HR compliance, payroll management, and effective employee relations to scale your business smoothly.",
       color: "from-purple-400 to-pink-500",
       bgLight: "bg-purple-50"
-    },
-    { 
-      icon: Flag, 
-      label: "HR Career", 
-      desc: "Your final destination. Build a rock-solid foundation for a lifelong, high-paying career in Human Resources with our dedicated placement support.",
-      color: "from-rose-400 to-red-500",
-      bgLight: "bg-rose-50"
     }
   ];
 
@@ -67,7 +60,7 @@ export function WhoIsThisFor() {
         <div className="container mx-auto px-4 md:px-6 w-full h-full flex flex-col justify-center py-6 md:py-8 lg:py-12">
           <MotionWrapper className="text-center mb-6 md:mb-8 shrink-0">
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 md:mb-6 tracking-tight lang-ml">
-              ഈ PROGRAM <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">ആർക്കൊക്കെ വേണ്ടിയാണ്?</span>
+              ഈ PROGRAM <span className="text-[#fe9b19]">ആർക്കൊക്കെ വേണ്ടിയാണ്?</span>
             </h2>
             <p className="text-base md:text-lg text-slate-500 max-w-2xl mx-auto font-medium lang-ml">
               ജീവിതത്തിൽ അടുത്ത ഘട്ടത്തിലേക്ക് കടക്കാൻ തയ്യാറുള്ളവർക്കായി തയ്യാറാക്കിയ പ്രോഗ്രാമാണിത്.
