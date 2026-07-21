@@ -1,3 +1,4 @@
+// Main landing page
 import dynamic from "next/dynamic";
 import { Hero } from "@/components/sections/Hero";
 import { WhoIsThisFor } from "@/components/sections/WhoIsThisFor";
@@ -21,12 +22,12 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
+      <TestimonialsCarousel />
       <WhoIsThisFor />
       <div className="relative z-10 bg-white/40 backdrop-blur-2xl shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.05)] border-t border-white/60">
-        <Curriculum />
         <FacultyCarousel />
+        <Curriculum />
         <CourseHighlights />
-        <TestimonialsCarousel />
         <FAQ />
       </div>
       <Pricing />

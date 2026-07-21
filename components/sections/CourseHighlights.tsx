@@ -3,7 +3,6 @@
 import { MotionWrapper } from "@/components/MotionWrapper";
 import { CheckCircle2, Briefcase, GraduationCap, Users, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import Link from "next/link";
 
 export function CourseHighlights() {
   const highlights = [
@@ -74,12 +73,12 @@ export function CourseHighlights() {
         </div>
 
         <MotionWrapper delay={0.2} yOffset={20} className="flex justify-center mt-8 relative z-50">
-          <Link href="/schedule">
+          <a href="#pricing">
             <Button size="lg" className="flex items-center gap-2 bg-slate-900 hover:bg-[#fe9b19] text-white rounded-full font-bold transition-colors group">
               <span>Book a Free Demo</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </Link>
+          </a>
         </MotionWrapper>
 
       </div>

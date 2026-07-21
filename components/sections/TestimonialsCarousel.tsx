@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { Play, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Play, X } from "lucide-react";
 import { MotionWrapper } from "@/components/MotionWrapper";
 import { fallbackContent } from "@/lib/content";
 
@@ -138,14 +138,17 @@ export function TestimonialsCarousel() {
     videoTestimonials: VideoTestimonial[];
   };
 
+  // Triplicate the items so the auto-loop is completely seamless and continuous
+  const duplicatedTestimonials = [...videoTestimonials, ...videoTestimonials, ...videoTestimonials];
+
   const [activePlayingId, setActivePlayingId] = useState<string | null>(null);
 
   const autoplayRef = useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
+    Autoplay({ delay: 2500, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: "start", skipSnaps: false },
+    { loop: true, align: "start", skipSnaps: false, dragFree: true },
     [autoplayRef.current]
   );
 
@@ -166,42 +169,21 @@ export function TestimonialsCarousel() {
     }
   }, [activePlayingId, emblaApi]);
 
-  const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
-  const scrollNext = () => emblaApi && emblaApi.scrollNext();
-
   return (
     <section className="py-24 bg-slate-50 relative overflow-hidden" id="testimonials">
       {/* Decorative Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[400px] bg-gradient-to-b from-amber-500/10 to-transparent blur-3xl -z-10 pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        {/* Header with Navigation Buttons */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <MotionWrapper className="text-left">
+        {/* Centered Header */}
+        <div className="flex flex-col items-center text-center mb-16 md:mb-20">
+          <MotionWrapper className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
               Hear From Our <span className="text-[#fe9b19]">Students</span>
             </h2>
-            <p className="text-lg text-slate-500 max-w-2xl font-medium">
+            <p className="text-base md:text-lg text-slate-500 max-w-2xl mx-auto font-medium">
               See how students switch careers and land high-paying roles in top companies through PerpeX.
             </p>
-          </MotionWrapper>
-
-          {/* Navigation Arrows */}
-          <MotionWrapper delay={0.1} className="flex items-center gap-3 shrink-0">
-            <button
-              onClick={scrollPrev}
-              className="w-12 h-12 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition-all shadow-sm hover:shadow active:scale-95 cursor-pointer"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={scrollNext}
-              className="w-12 h-12 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition-all shadow-sm hover:shadow active:scale-95 cursor-pointer"
-              aria-label="Next slide"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
           </MotionWrapper>
         </div>
 
@@ -209,9 +191,9 @@ export function TestimonialsCarousel() {
         <MotionWrapper delay={0.2} className="overflow-visible py-4">
           <div className="embla overflow-hidden" ref={emblaRef}>
             <div className="embla__container flex touch-pan-y gap-6 px-4">
-              {videoTestimonials.map((item) => (
+              {duplicatedTestimonials.map((item, idx) => (
                 <div
-                  key={item.id}
+                  key={`${item.id}-${idx}`}
                   className="embla__slide flex-[0_0_85%] sm:flex-[0_0_48%] lg:flex-[0_0_31%] xl:flex-[0_0_24%] min-w-0"
                 >
                   <VideoCard

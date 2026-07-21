@@ -3,7 +3,6 @@
 import { ClipboardList, Coins, MonitorSmartphone, BarChart3, MessageSquare, Building2, ArrowRight } from "lucide-react";
 import { MotionWrapper } from "@/components/MotionWrapper";
 import { Button } from "@/components/ui/Button";
-import Link from "next/link";
 import { fallbackContent } from "@/lib/content";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -36,13 +35,13 @@ export function Curriculum() {
             
             return (
               <MotionWrapper key={index} delay={0.1 * index} yOffset={20}>
-                <div className="h-full bg-white border border-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-8 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300 group flex flex-col justify-start">
+                <div className="h-full bg-white border border-gray-100 rounded-2xl sm:rounded-3xl p-5 sm:p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-200/80 transition-all duration-300 ease-out flex flex-col justify-start">
                   
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-100 flex items-center justify-center mb-4 sm:mb-8 shrink-0">
-                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-600 group-hover:scale-110 transition-transform duration-300" />
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-600" />
                   </div>
                   
-                  <h3 className="text-sm sm:text-xl font-bold text-slate-900 mb-1 sm:mb-2 tracking-tight">
+                  <h3 className="text-base sm:text-xl font-bold text-slate-900 mb-2 tracking-tight">
                     {module.title}
                   </h3>
                   
@@ -56,12 +55,12 @@ export function Curriculum() {
         </div>
 
         <MotionWrapper delay={0.6} className="text-center">
-          <Link href="/schedule">
+          <a href="#pricing">
             <Button size="lg" className="w-full sm:w-auto group">
               <span>View Full Syllabus</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </Link>
+          </a>
         </MotionWrapper>
       </div>
     </section>

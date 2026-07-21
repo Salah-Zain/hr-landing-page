@@ -14,91 +14,98 @@ export const fallbackContent = {
   },
   faculty: [
     {
-      name: "John Doe",
+      name: "Aflah",
       title: "Senior HR Consultant",
       company: "Tech Mahindra",
       experience: "12+ years experience",
-      photo: "/images/faculty-1.png"
+      photo: "/images/faculty/aflah.png"
     },
     {
-      name: "Jane Smith",
+      name: "Afnidha",
       title: "HR Head",
       company: "TCS",
-      experience: "15+ years experience",
-      photo: "/images/faculty-2.png"
+      experience: "10+ years experience",
+      photo: "/images/faculty/afnidha.png"
     },
     {
-      name: "Michael Johnson",
+      name: "Vishnu",
       title: "Talent Acquisition Lead",
       company: "Infosys",
-      experience: "10+ years experience",
-      photo: "/images/faculty-3.png"
+      experience: "11+ years experience",
+      photo: "/images/faculty/vishnu.png"
     },
     {
-      name: "Sarah Williams",
+      name: "Shahin",
       title: "HR Business Partner",
       company: "Wipro",
-      experience: "8+ years experience",
-      photo: "/images/faculty-4.png"
+      experience: "9+ years experience",
+      photo: "/images/faculty/shahin.png"
     },
     {
-      name: "David Brown",
+      name: "Rafi",
       title: "VP of HR",
       company: "Cognizant",
-      experience: "20+ years experience",
-      photo: "/images/faculty-5.png"
+      experience: "15+ years experience",
+      photo: "/images/faculty/rafi.png"
     },
     {
-      name: "Priya Nair",
+      name: "Sukhanya",
       title: "HR Operations Lead",
       company: "UST Global",
-      experience: "11+ years experience",
-      photo: "/images/faculty-6.png"
+      experience: "8+ years experience",
+      photo: "/images/faculty/sukhanya.png"
     },
     {
-      name: "Arun Kumar",
+      name: "Navas",
       title: "Compensation Specialist",
       company: "EY India",
-      experience: "9+ years experience",
-      photo: "/images/faculty-7.png"
+      experience: "10+ years experience",
+      photo: "/images/faculty/navas.png"
     },
     {
-      name: "Deepa Menon",
+      name: "Nisam",
       title: "Director of HR",
       company: "Allianz",
-      experience: "18+ years experience",
-      photo: "/images/faculty-8.png"
+      experience: "14+ years experience",
+      photo: "/images/faculty/nisam.png"
+    },
+    {
+      name: "Vineesh",
+      title: "HR Analytics Lead",
+      company: "Deloitte",
+      experience: "13+ years experience",
+      photo: "/images/faculty/vineesh.png"
     }
   ],
   curriculum: [
     {
       title: "Core HR Functions",
-      description: "Recruitment, onboarding, exit — end to end",
+      description: "Recruitment, onboarding, & exit management — complete end-to-end practical training.",
       icon: "ClipboardList"
     },
     {
-      title: "Payroll & Compliance",
-      description: "PF, ESI, TDS, Labour Law — practically handled",
+      title: "Payroll & Statutory Compliance",
+      description: "PF, ESI, TDS, & Labour Laws — practically calculated, audited, and processed.",
       icon: "Coins"
     },
     {
-      title: "HRMS, Tools and HR Analytics",
-      description: "Zoho People, Greythr, Excel HR — hands on",
+      title: "HRMS & HR Analytics",
+      description: "Zoho People, Greythr, & Excel HR — hands-on practical software workflows.",
       icon: "MonitorSmartphone"
     },
     {
       title: "GCC HR Compliance",
-      description: "Attrition data, workforce reports",
+      description: "GCC labor laws, attrition tracking, & executive workforce data reporting.",
       icon: "BarChart3"
     },
     {
-      title: "Performance Management System",
-      description: "Handling employees, conflict, management",
+      title: "Performance Management",
+      description: "Handling appraisal cycles, employee conflict, & team retention strategies.",
       icon: "MessageSquare"
     },
     {
       title: "Live Industry Projects",
-      description: "Work on real company cases before you graduate",
+      description: "Work on real corporate cases & live scenarios before you graduate.",
       icon: "Building2"
     }
   ],

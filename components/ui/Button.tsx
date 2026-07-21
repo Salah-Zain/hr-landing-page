@@ -5,23 +5,23 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 gap-2",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 gap-2.5 cursor-pointer group active:scale-95",
   {
     variants: {
       variant: {
-        default: "bg-slate-900 text-white hover:bg-[#fe9b19] shadow-md hover:shadow-lg",
+        default: "bg-slate-900 text-white hover:bg-[#fe9b19] shadow-md hover:shadow-xl hover:shadow-amber-500/20",
         destructive: "bg-red-500 text-white hover:bg-red-600",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        white: "bg-white text-slate-900 shadow-lg hover:shadow-xl hover:bg-gray-50",
+        outline: "border border-slate-200 bg-white text-slate-900 hover:bg-slate-900 hover:text-white",
+        secondary: "bg-slate-100 text-slate-900 hover:bg-slate-200",
+        ghost: "hover:bg-slate-100 text-slate-700",
+        link: "text-slate-900 underline-offset-4 hover:underline",
+        white: "bg-white text-slate-900 shadow-md hover:shadow-xl hover:bg-slate-900 hover:text-white",
       },
       size: {
-        default: "h-14 px-8 rounded-full",
-        sm: "h-12 px-6 rounded-full",
-        lg: "h-16 px-10 rounded-full text-lg",
-        icon: "h-14 w-14 rounded-full",
+        default: "h-14 px-8 text-base rounded-full",
+        sm: "h-11 px-6 text-sm rounded-full",
+        lg: "h-14 px-8 text-base rounded-full",
+        icon: "h-12 w-12 rounded-full",
       },
     },
     defaultVariants: {

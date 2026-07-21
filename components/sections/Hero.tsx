@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import Link from "next/link";
 import { MotionWrapper } from "@/components/MotionWrapper";
 import { fallbackContent } from "@/lib/content";
 
@@ -70,12 +69,12 @@ export function Hero() {
 
         <MotionWrapper delay={0.6} yOffset={20}>
           <div className="mx-auto w-full flex items-center justify-center mt-10">
-            <Link href="/schedule">
+            <a href="#pricing">
               <Button size="lg" className="group">
                 <span>{cta1}</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
+            </a>
           </div>
         </MotionWrapper>
       </section>
