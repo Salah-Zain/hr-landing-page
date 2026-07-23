@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { Footer } from "@/components/sections/Footer";
+import Script from "next/script";
 
 const poppins = Poppins({ 
   subsets: ["latin"], 
@@ -45,6 +46,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "xqsxzqqgq9");
+          `}
+        </Script>
+      </head>
       <body className={`${poppins.variable} ${inter.variable} ${balooChettan2.variable} ${notoMalayalam.variable} font-sans relative bg-white`}>
         {/* Global Fixed Parallax Background - Clean White with faint dots */}
         <div className="fixed inset-0 pointer-events-none bg-dot-pattern opacity-60" style={{ zIndex: -50 }} />

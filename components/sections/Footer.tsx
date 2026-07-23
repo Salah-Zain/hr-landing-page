@@ -27,11 +27,17 @@ export function Footer() {
   return (
     <footer className="bg-white text-slate-500 py-6 border-t border-slate-200">
       <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-        <p className="font-medium text-slate-600">&copy; {currentYear} PerpeX HR. All rights reserved.</p>
-        
+        <p className="text-xs sm:text-sm text-slate-500 font-medium">
+          &copy; {currentYear} PerpeX HR. All rights reserved.
+        </p>
+
         <div className="flex items-center gap-6">
-          <Link href="#" className="hover:text-amber-600 transition-colors font-medium">Privacy Policy</Link>
-          <Link href="#" className="hover:text-amber-600 transition-colors font-medium">Terms of Service</Link>
+          <Link href="#" className="text-xs sm:text-sm text-slate-500 font-medium hover:text-amber-600 transition-colors">
+            Privacy Policy
+          </Link>
+          <Link href="#" className="text-xs sm:text-sm text-slate-500 font-medium hover:text-amber-600 transition-colors">
+            Terms of Service
+          </Link>
           <div className="w-px h-4 bg-slate-300 mx-2 hidden md:block"></div>
           <div className="flex items-center gap-4">
             <a href="#" className="text-slate-400 hover:text-amber-600 transition-colors" aria-label="Facebook">
