@@ -56,6 +56,19 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "xqsxzqqgq9");
           `}
         </Script>
+        {/* Google Analytics GA4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-W6J82454QV"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-W6J82454QV');
+          `}
+        </Script>
       </head>
       <body className={`${poppins.variable} ${inter.variable} ${balooChettan2.variable} ${notoMalayalam.variable} font-sans relative bg-white`}>
         {/* Global Fixed Parallax Background - Clean White with faint dots */}
