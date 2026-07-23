@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { Footer } from "@/components/sections/Footer";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 const poppins = Poppins({ 
   subsets: ["latin"], 
@@ -65,6 +66,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <MobileStickyCTA />
+        <Analytics />
       </body>
     </html>
   );
