@@ -86,8 +86,17 @@ export function Navbar() {
               </a>
             ))}
             <div className="w-px h-6 bg-slate-200 mx-2"></div>
-            <a href="#pricing">
-              <Button size="sm" className="px-6 h-10 rounded-full hover:scale-105 transition-transform shadow-md shadow-amber-500/20 ml-2">
+            <a 
+              href="#pricing"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <Button 
+                size="sm" 
+                className="px-6 h-10 rounded-full hover:scale-105 transition-transform shadow-md shadow-amber-500/20 ml-2"
+              >
                 Book Free Demo
               </Button>
             </a>
@@ -128,8 +137,19 @@ export function Navbar() {
                 </a>
               ))}
               <div className="pt-4 mt-2 border-t border-slate-100">
-                <a href="#pricing" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button size="lg" className="w-full h-14 rounded-2xl text-lg shadow-lg shadow-amber-500/20">
+                <a 
+                  href="#pricing" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="block w-full"
+                >
+                  <Button 
+                    size="lg" 
+                    className="w-full h-14 rounded-2xl text-lg shadow-lg shadow-amber-500/20"
+                  >
                     Book Free Demo
                   </Button>
                 </a>

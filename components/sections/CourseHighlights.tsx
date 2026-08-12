@@ -55,7 +55,7 @@ export function CourseHighlights() {
                 marginTop: index === 0 ? '0' : (index === highlights.length - 1 ? '10vh' : '40vh')
               }}
             >
-              <div className="bg-white rounded-3xl md:rounded-[40px] border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.06)] p-8 md:p-12 w-full flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
+              <div className="bg-white rounded-3xl md:rounded-[40px] border border-slate-300 shadow-[0_8px_30px_rgba(0,0,0,0.06)] p-8 md:p-12 w-full flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
                 <div className={`w-20 h-20 shrink-0 rounded-2xl flex items-center justify-center shadow-sm ${item.color}`}>
                   {item.icon}
                 </div>

@@ -14,67 +14,67 @@ export const fallbackContent = {
   },
   faculty: [
     {
-      name: "Aflah",
-      title: "Senior HR Consultant",
-      company: "Tech Mahindra",
+      name: "Aflah C.P",
+      title: "Training Manager",
+      company: "PerpeX",
       experience: "12+ years experience",
-      photo: "/images/faculty/aflah.png"
+      photo: "/images/faculty/aflah.jpg"
     },
     {
-      name: "Afnidha",
-      title: "HR Head",
-      company: "TCS",
+      name: "Afnidha K",
+      title: "HR Manager",
+      company: "PerpeX",
       experience: "10+ years experience",
-      photo: "/images/faculty/afnidha.png"
+      photo: "/images/faculty/afnidha.jpg"
     },
     {
-      name: "Vishnu",
-      title: "Talent Acquisition Lead",
-      company: "Infosys",
+      name: "Vishnu M.V",
+      title: "Strategic HR Specialist",
+      company: "PerpeX",
       experience: "11+ years experience",
-      photo: "/images/faculty/vishnu.png"
+      photo: "/images/faculty/vishnu.jpg"
     },
     {
       name: "Shahin",
       title: "HR Business Partner",
-      company: "Wipro",
+      company: "PerpeX",
       experience: "9+ years experience",
-      photo: "/images/faculty/shahin.png"
+      photo: "/images/faculty/shahin.jpg"
     },
     {
       name: "Rafi",
       title: "VP of HR",
-      company: "Cognizant",
+      company: "PerpeX",
       experience: "15+ years experience",
-      photo: "/images/faculty/rafi.png"
+      photo: "/images/faculty/rafi.jpg"
     },
     {
-      name: "Sukhanya",
-      title: "HR Operations Lead",
-      company: "UST Global",
+      name: "Sukanya Surendren",
+      title: "Assistant Senior Manager",
+      company: "PerpeX",
       experience: "8+ years experience",
-      photo: "/images/faculty/sukhanya.png"
+      photo: "/images/faculty/sukhanya.jpg"
     },
     {
       name: "Navas",
       title: "Compensation Specialist",
-      company: "EY India",
+      company: "PerpeX",
       experience: "10+ years experience",
-      photo: "/images/faculty/navas.png"
+      photo: "/images/faculty/navas.jpg"
     },
     {
-      name: "Nisam",
-      title: "Director of HR",
-      company: "Allianz",
+      name: "Nissamudeen K",
+      title: "Soft Skill Trainer",
+      company: "PerpeX",
       experience: "14+ years experience",
-      photo: "/images/faculty/nisam.png"
+      photo: "/images/faculty/nisam.jpg"
     },
     {
-      name: "Vineesh",
-      title: "HR Analytics Lead",
-      company: "Deloitte",
+      name: "Vineesh V N",
+      title: "Chief People Officer",
+      company: "Guest Faculty @ PerpeX",
       experience: "13+ years experience",
-      photo: "/images/faculty/vineesh.png"
+      photo: "/images/faculty/vineesh.jpg"
     }
   ],
   curriculum: [
@@ -144,7 +144,8 @@ export const fallbackContent = {
       role: "Associate HR Specialist",
       quote: "PerpeX HR course completely changed my confidence. The practical payroll calculations and mock interviews prepared me to secure an offer in UST.",
       tag: "Non-IT to HR Switch",
-      videoUrl: "/testimonials/video-1.mp4"
+      videoUrl: "/testimonials/video-1.mp4",
+      instagramUrl: "https://www.instagram.com/reel/DYjMIcRJfgs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     },
     {
       id: "video-2",
@@ -154,7 +155,8 @@ export const fallbackContent = {
       role: "HR Operations Associate",
       quote: "Learning GCC HR compliance and Zoho People hands-on was a game-changer. I wasn't just learning theory; I was practicing what HRs actually do.",
       tag: "Career Growth",
-      videoUrl: "/testimonials/video-2.mp4"
+      videoUrl: "/testimonials/video-2.mp4",
+      instagramUrl: "https://www.instagram.com/reel/DX_JTY8pu_j/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     },
     {
       id: "video-3",
@@ -164,7 +166,8 @@ export const fallbackContent = {
       role: "Talent Acquisition Specialist",
       quote: "The mentorship at PerpeX is outstanding. They hold your hand through the entire journey, from resume writing to placement interviews.",
       tag: "Placement Support",
-      videoUrl: "/testimonials/video-3.mp4"
+      videoUrl: "/testimonials/video-3.mp4",
+      instagramUrl: "https://www.instagram.com/reel/DU4lFg1iauM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     },
     {
       id: "video-4",
@@ -174,7 +177,8 @@ export const fallbackContent = {
       role: "HR Operations Specialist",
       quote: "I recommend PerpeX to anyone who wants a serious career in HR. The live project compliance audits were exactly like my current job duties.",
       tag: "Fresher Placed",
-      videoUrl: "/testimonials/video-4.mp4"
+      videoUrl: "/testimonials/video-4.mp4",
+      instagramUrl: "https://www.instagram.com/reel/DYMLcApJ4ES/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     }
   ],
   faq: [

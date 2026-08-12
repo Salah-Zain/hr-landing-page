@@ -3,7 +3,10 @@
 import React from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 
+import { useBooking } from "@/components/BookingContext";
+
 export default function HeroSection() {
+  const { openBookingModal } = useBooking();
   const [menuOpen, setMenuOpen] = React.useState(false);
   const menuRef = React.useRef<HTMLDivElement | null>(null);
 
@@ -73,7 +76,10 @@ export default function HeroSection() {
             </button>
           </div>
 
-          <button className="hidden md:block bg-amber-500 hover:bg-amber-600 text-slate-900 px-6 py-2.5 rounded-full font-bold transition shadow-sm">
+          <button 
+            onClick={() => openBookingModal()}
+            className="hidden md:block bg-amber-500 hover:bg-amber-600 text-slate-900 px-6 py-2.5 rounded-full font-bold transition shadow-sm"
+          >
             Book Free Demo
           </button>
 
@@ -109,7 +115,10 @@ export default function HeroSection() {
         </p>
 
         <div className="mx-auto w-full flex items-center justify-center mt-10">
-          <button className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-900 px-8 py-4 rounded-full font-bold transition shadow-[0_8px_30px_rgba(245,158,11,0.3)] hover:shadow-[0_8px_40px_rgba(245,158,11,0.5)] hover:-translate-y-1">
+          <button 
+            onClick={() => openBookingModal()}
+            className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-900 px-8 py-4 rounded-full font-bold transition shadow-[0_8px_30px_rgba(245,158,11,0.3)] hover:shadow-[0_8px_40px_rgba(245,158,11,0.5)] hover:-translate-y-1"
+          >
             <span>Book Your Free Demo Class</span>
             <ArrowRight className="w-5 h-5" />
           </button>

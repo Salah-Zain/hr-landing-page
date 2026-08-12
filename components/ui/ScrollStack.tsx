@@ -5,7 +5,7 @@ import Lenis from "lenis";
 
 export const ScrollStackItem = ({ children, itemClassName = "" }: { children: ReactNode, itemClassName?: string }) => (
   <div
-    className={`scroll-stack-card relative w-full my-8 p-8 md:p-12 bg-white rounded-3xl md:rounded-[40px] border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] box-border origin-top ${itemClassName}`.trim()}
+    className={`scroll-stack-card relative w-full my-8 p-8 md:p-12 bg-white rounded-3xl md:rounded-[40px] border border-slate-300 shadow-[0_8px_30px_rgba(0,0,0,0.04)] box-border origin-top ${itemClassName}`.trim()}
   >
     {children}
   </div>

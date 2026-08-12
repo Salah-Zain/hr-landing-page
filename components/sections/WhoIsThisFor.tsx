@@ -14,13 +14,11 @@ import {
 } from "lucide-react";
 import { MotionWrapper } from "@/components/MotionWrapper";
 import { Button } from "@/components/ui/Button";
-
-const AUTO_PLAY_DURATION = 5000; // 5 seconds per tab
+import { useBooking } from "@/components/BookingContext";
 
 export function WhoIsThisFor() {
+  const { openBookingModal } = useBooking();
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [progress, setProgress] = useState(0);
   const tabsRef = useRef<(HTMLButtonElement | null)[]>([]);
 
   const steps = [
@@ -82,42 +80,13 @@ export function WhoIsThisFor() {
     }
   }, [activeIndex]);
 
-  // Sequential step advancement timer (0 -> 1 -> 2 -> 3 -> 0)
-  useEffect(() => {
-    if (isPaused) return;
-
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % steps.length);
-    }, AUTO_PLAY_DURATION);
-
-    return () => clearInterval(timer);
-  }, [isPaused, steps.length]);
-
-  // Smooth progress bar driver synchronized with activeIndex
-  useEffect(() => {
-    if (isPaused) return;
-
-    setProgress(0);
-    const startTime = Date.now();
-
-    const progressTimer = setInterval(() => {
-      const elapsed = Date.now() - startTime;
-      const pct = Math.min((elapsed / AUTO_PLAY_DURATION) * 100, 100);
-      setProgress(pct);
-    }, 40);
-
-    return () => clearInterval(progressTimer);
-  }, [activeIndex, isPaused]);
-
   const handleTabClick = useCallback((index: number) => {
     setActiveIndex(index);
-    setProgress(0);
   }, []);
 
   return (
     <section className="bg-slate-50/70 py-16 md:py-24 relative overflow-hidden" id="program">
       {/* Background Subtle Gradient Blobs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-amber-200/30 rounded-full filter blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-indigo-200/30 rounded-full filter blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -137,13 +106,7 @@ export function WhoIsThisFor() {
         </MotionWrapper>
 
         {/* Interactive Showcase Container */}
-        <div 
-          className="max-w-6xl mx-auto bg-white rounded-3xl md:rounded-[36px] shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={() => setIsPaused(true)}
-          onTouchEnd={() => setIsPaused(false)}
-        >
+        <div className="max-w-6xl mx-auto bg-white rounded-3xl md:rounded-[36px] shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
           
           {/* Mobile Tabs Header (Horizontal Scroll) */}
           <div className="md:hidden bg-slate-50 border-b border-slate-100 p-2.5 flex items-center gap-2 overflow-x-auto no-scrollbar">
@@ -196,14 +159,6 @@ export function WhoIsThisFor() {
                     {/* Active Accent Bar Left */}
                     {isActive && (
                       <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#fe9b19]" />
-                    )}
-
-                    {/* Active Auto-play Progress Line at Bottom */}
-                    {isActive && !isPaused && (
-                      <div 
-                        className="absolute bottom-0 left-0 h-[2.5px] bg-[#fe9b19] transition-all duration-75"
-                        style={{ width: `${progress}%` }}
-                      />
                     )}
 
                     <div className={`w-10 h-10 lg:w-11 lg:h-11 shrink-0 rounded-xl flex items-center justify-center transition-transform duration-300 ${isActive ? "bg-slate-100 text-slate-800 scale-105" : "bg-slate-100 text-slate-400 group-hover:scale-105"}`}>
@@ -272,41 +227,33 @@ export function WhoIsThisFor() {
                       <h5 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-500 mb-3">
                         Key Program Highlights
                       </h5>
-                      {steps[activeIndex].highlights.map((highlight, hIdx) => (
-                        <div key={hIdx} className="flex items-center gap-3">
-                          <div className="w-5 h-5 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0">
-                            <CheckCircle2 className="w-3.5 h-3.5" />
-                          </div>
-                          <span className="text-slate-800 text-sm sm:text-base font-semibold">
-                            {highlight}
-                          </span>
+                      {steps[activeIndex].highlights.map((item, hIdx) => (
+                        <div key={hIdx} className="flex items-center gap-3 text-slate-800 text-sm sm:text-base font-semibold">
+                          <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+                          <span>{item}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  {/* Centered Footer Action Button & Step Indicator */}
-                  <div className="pt-6 border-t border-slate-100 flex flex-col items-center justify-center text-center gap-3 w-full">
-                    <a href="#pricing" className="w-full sm:w-auto flex justify-center">
-                      <Button size="default" className="w-full sm:w-auto px-10">
-                        <span>Enroll For This Track</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </a>
-
-                    <div className="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
-                      <span>Step {activeIndex + 1} of {steps.length}</span>
-                      <span className="w-1 h-1 rounded-full bg-slate-300" />
-                      <span>Click any role to explore</span>
-                    </div>
+                  {/* Primary CTA Button for Active Track */}
+                  <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <Button 
+                      onClick={() => openBookingModal(steps[activeIndex].label)}
+                      size="lg"
+                      className="w-full sm:w-auto px-8 bg-slate-900 hover:bg-[#fe9b19] text-white font-bold rounded-full transition-all duration-300 gap-2 shadow-md hover:shadow-xl hover:shadow-amber-500/20 group"
+                    >
+                      <span>Enroll For This Track</span>
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                    <span className="text-xs text-slate-500 font-medium">
+                      Step {activeIndex + 1} of {steps.length} • Click any role to explore
+                    </span>
                   </div>
-
                 </motion.div>
               </AnimatePresence>
             </div>
-
           </div>
-
         </div>
 
       </div>

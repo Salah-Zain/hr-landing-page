@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Check, ArrowRight } from "lucide-react";
+import { useBooking } from "@/components/BookingContext";
 
 export function Pricing() {
+  const { openBookingModal } = useBooking();
+
   return (
     <section className="py-24 bg-transparent relative z-10" id="pricing">
       <div className="container mx-auto px-4 md:px-6">
@@ -82,12 +85,13 @@ export function Pricing() {
                 </div>
 
                 <div className="w-full md:w-auto flex-shrink-0">
-                  <a href="https://wa.me/?text=Hi%20PerpeX%2C%20I%20want%20to%20enroll%20in%20the%20HR%20Program" target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
-                    <Button className="w-full sm:w-auto">
-                      <span>Enroll Now</span>
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </a>
+                  <Button 
+                    onClick={() => openBookingModal("Practical HR Management & Payroll")} 
+                    className="w-full sm:w-auto px-8"
+                  >
+                    <span>Enroll Now</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
                   <p className="text-xs text-slate-400 mt-4 text-center font-medium">Next batch starting soon</p>
                 </div>
               </div>

@@ -35,7 +35,7 @@ export function Curriculum() {
             
             return (
               <MotionWrapper key={index} delay={0.1 * index} yOffset={20}>
-                <div className="h-full bg-white border border-gray-100 rounded-2xl sm:rounded-3xl p-5 sm:p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-200/80 transition-all duration-300 ease-out flex flex-col justify-start">
+                <div className="h-full bg-white border border-slate-300 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-2xl sm:rounded-3xl p-5 sm:p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-200/85 hover:border-amber-400 transition-all duration-300 ease-out flex flex-col justify-start">
                   
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-100 flex items-center justify-center mb-4 sm:mb-8 shrink-0">
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-600" />

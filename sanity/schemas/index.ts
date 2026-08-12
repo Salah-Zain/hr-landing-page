@@ -3,5 +3,7 @@ import { facultySchema } from "./faculty";
 import { testimonialSchema } from "./testimonial";
 import { faqSchema } from "./faq";
 import { settingsSchema } from "./settings";
+import { enquirySchema } from "./enquiry";
 
-export const schemaTypes = [heroSchema, facultySchema, testimonialSchema, faqSchema, settingsSchema];
+export const schemaTypes = [heroSchema, facultySchema, testimonialSchema, faqSchema, settingsSchema, enquirySchema];
+
