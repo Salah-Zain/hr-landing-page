@@ -35,15 +35,15 @@ export const fallbackContent = {
       photo: "/images/faculty/vishnu.jpg"
     },
     {
-      name: "Shahin",
-      title: "HR Business Partner",
+      name: "ShahinSha Thasveer",
+      title: "Academic Director",
       company: "PerpeX",
       experience: "9+ years experience",
       photo: "/images/faculty/shahin.jpg"
     },
     {
-      name: "Rafi",
-      title: "VP of HR",
+      name: "Mohammed Rafi",
+      title: "Founder",
       company: "PerpeX",
       experience: "15+ years experience",
       photo: "/images/faculty/rafi.jpg"
@@ -56,8 +56,8 @@ export const fallbackContent = {
       photo: "/images/faculty/sukhanya.jpg"
     },
     {
-      name: "Navas",
-      title: "Compensation Specialist",
+      name: "Navas Shareef",
+      title: "Founder",
       company: "PerpeX",
       experience: "10+ years experience",
       photo: "/images/faculty/navas.jpg"

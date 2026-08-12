@@ -21,6 +21,18 @@ export function JsonLd() {
       "instructor": [
         {
           "@type": "Person",
+          "name": "Mohammed Rafi",
+          "jobTitle": "Founder",
+          "worksFor": { "@type": "Organization", "name": "PerpeX" }
+        },
+        {
+          "@type": "Person",
+          "name": "Navas Shareef",
+          "jobTitle": "Founder",
+          "worksFor": { "@type": "Organization", "name": "PerpeX" }
+        },
+        {
+          "@type": "Person",
           "name": "Aflah C.P",
           "jobTitle": "Training Manager",
           "worksFor": { "@type": "Organization", "name": "PerpeX" }
@@ -29,6 +41,12 @@ export function JsonLd() {
           "@type": "Person",
           "name": "Afnidha K",
           "jobTitle": "HR Manager",
+          "worksFor": { "@type": "Organization", "name": "PerpeX" }
+        },
+        {
+          "@type": "Person",
+          "name": "ShahinSha Thasveer",
+          "jobTitle": "Academic Director",
           "worksFor": { "@type": "Organization", "name": "PerpeX" }
         },
         {
