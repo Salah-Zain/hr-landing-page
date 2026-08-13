@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, Suspense } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { 
@@ -57,9 +58,15 @@ function SidebarContent({ mobileOpen, setMobileOpen }: { mobileOpen: boolean; se
       <div className="space-y-6">
         {/* Brand Logo & Portal Badge */}
         <div className="flex flex-col gap-1.5 pt-2">
-          <Link href="/admin/enquiries" className="flex items-center gap-2.5 font-black text-2xl text-white tracking-tight">
-            <span>Place<span className="text-[#fe9b19]">X</span></span>
-            <span className="text-[10px] font-extrabold tracking-widest bg-amber-500/20 text-[#fe9b19] px-2.5 py-0.5 rounded-full border border-amber-500/30 uppercase shadow-xs">
+          <Link href="/admin/enquiries" className="flex items-center gap-2.5">
+            <Image
+              src="/images/logo/placex-logo.png"
+              alt="PlaceX Logo"
+              width={220}
+              height={50}
+              className="h-10 sm:h-12 w-auto object-contain brightness-0 invert"
+            />
+            <span className="text-[10px] font-extrabold tracking-widest bg-amber-500/20 text-[#fe9b19] px-2.5 py-0.5 rounded-full border border-amber-500/30 uppercase shadow-xs shrink-0">
               Admin
             </span>
           </Link>
@@ -162,9 +169,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     <div className="min-h-screen bg-slate-100 flex flex-col md:flex-row text-slate-900 font-sans">
       {/* Mobile Top Navigation Bar */}
       <div className="md:hidden flex items-center justify-between bg-slate-950 text-white p-4 border-b border-slate-800">
-        <Link href="/admin/enquiries" className="flex items-center gap-2 font-black text-xl">
-          <span>Place<span className="text-[#fe9b19]">X</span></span>
-          <span className="text-[10px] font-extrabold tracking-widest bg-amber-500/20 text-[#fe9b19] px-2 py-0.5 rounded-full border border-amber-500/30 uppercase">
+        <Link href="/admin/enquiries" className="flex items-center gap-2">
+          <Image
+            src="/images/logo/placex-logo.png"
+            alt="PlaceX Logo"
+            width={160}
+            height={36}
+            className="h-7 w-auto object-contain brightness-0 invert"
+          />
+          <span className="text-[10px] font-extrabold tracking-widest bg-amber-500/20 text-[#fe9b19] px-2 py-0.5 rounded-full border border-amber-500/30 uppercase shrink-0">
             Admin
           </span>
         </Link>

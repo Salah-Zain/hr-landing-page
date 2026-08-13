@@ -5,6 +5,7 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const links = [
   { name: "About", href: "#program" },
@@ -33,7 +34,7 @@ export function Navbar() {
     }
 
     // Hide/Show logic
-    if (latest > previous && latest > 150) {
+    if (latest > 150 && latest > previous) {
       setHidden(true);
     } else {
       setHidden(false);
@@ -69,9 +70,16 @@ export function Navbar() {
             ? "bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-full h-16 px-6 md:px-8" 
             : "bg-transparent h-24 px-4 md:px-8"
         )}>
-          {/* Logo */}
-          <a href="#" className="text-2xl font-black tracking-tighter text-slate-900 flex items-center gap-1 group">
-            Place<span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500 group-hover:from-orange-500 group-hover:to-amber-500 transition-all duration-500">X</span>
+          {/* Logo Image */}
+          <a href="#" className="flex items-center group py-1 shrink-0">
+            <Image
+              src="/images/logo/placex-logo.png"
+              alt="PlaceX Logo"
+              width={300}
+              height={65}
+              priority
+              className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto object-contain transition-transform group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop Links */}

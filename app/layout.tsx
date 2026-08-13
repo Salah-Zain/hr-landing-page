@@ -69,6 +69,11 @@ export const metadata: Metadata = {
   authors: [{ name: "PerpeX HR Academy", url: "https://perpex.in" }],
   creator: "PerpeX",
   publisher: "PerpeX",
+  icons: {
+    icon: "/images/logo/placex-logo.png",
+    shortcut: "/images/logo/placex-logo.png",
+    apple: "/images/logo/placex-logo.png",
+  },
   alternates: {
     canonical: "https://perpex.in",
   },

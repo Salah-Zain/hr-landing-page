@@ -63,7 +63,7 @@ export const fallbackContent = {
       photo: "/images/faculty/navas.jpg"
     },
     {
-      name: "Nissamudeen K",
+      name: "Nizamudeen K",
       title: "Soft Skill Trainer",
       company: "PerpeX",
       experience: "14+ years experience",
